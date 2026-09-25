@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best of NYC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="nyc-theme">
+    <div class="container">
+        <header class="hero">
+            <h1>The Magic of New York City</h1>
+            <p>A concrete jungle where dreams are made of.</p>
+        </header>
+
+        <section class="grid">
+            <div class="card">
+                <h3>Central Park</h3>
+                <p>The green heart of the city, perfect for escapes and picnics.</p>
+            </div>
+            <div class="card">
+                <h3>Times Square</h3>
+                <p>The bright lights and non-stop energy of the world's crossroads.</p>
+            </div>
+            <div class="card">
+                <h3>Statue of Liberty</h3>
+                <p>An iconic symbol of freedom and hope.</p>
+            </div>
+            <div class="card">
+                <h3>Museums</h3>
+                <p>From the Met to MoMA, endless culture awaits.</p>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <p>Want to dive into the local scene?</p>
+            <a href="east_village.html" class="btn">Explore the East Village &rarr;</a>
+        </div>
+    </div>
+
+    <script>
+        // Small interactivity: Card click effect
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', () => {
+                alert('Exploring ' + card.querySelector('h3').innerText + '...');
+            });
+        });
+    </script>
+</body>
+</html>

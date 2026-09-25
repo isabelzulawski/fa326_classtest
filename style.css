@@ -1,0 +1,128 @@
+:root {
+  --primary-nyc: #FFD700; /* Taxi Yellow */
+  --secondary-nyc: #0038A8; /* NYPD Blue */
+  --accent-nyc: #EF4135; /* Taxi Red/Stoplight */
+  --bg-nyc: #f0f4f8;
+  --text-nyc: #333;
+
+  --primary-ev: #FF00FF; /* Neon Pink */
+  --secondary-ev: #7B2CBF; /* Deep Purple */
+  --accent-ev: #00F5FF; /* Cyan */
+  --bg-ev: #1a1a1a; /* Dark mode for nightlife */
+  --text-ev: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.5s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Index Page Styles */
+.nyc-theme {
+  background-color: var(--bg-nyc);
+  color: var(--text-nyc);
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--primary-nyc), var(--accent-nyc));
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  color: var(--secondary-nyc);
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: var(--secondary-nyc);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--accent-nyc);
+}
+
+/* East Village Styles */
+.ev-theme {
+  background-color: var(--bg-ev);
+  color: var(--text-ev);
+}
+
+.hero-ev {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--primary-ev), var(--secondary-ev));
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+.ev-card {
+  background: #2a2a2a;
+  border: 2px solid var(--accent-ev);
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.ev-card:hover {
+  background: var(--secondary-ev);
+  transform: scale(1.05);
+}
+
+.ev-card h3 {
+  color: var(--accent-ev);
+}
+
+.interactive-box {
+  text-align: center;
+  padding: 40px;
+  background: #333;
+  border-radius: 15px;
+  margin-top: 40px;
+}
+
+#vibe-display {
+  font-size: 2rem;
+  margin-top: 20px;
+  font-weight: bold;
+  color: var(--primary-ev);
+}

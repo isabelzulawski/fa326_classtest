@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>East Village Vibes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="ev-theme">
+    <div class="container">
+        <header class="hero-ev">
+            <h1>East Village Vibes</h1>
+            <p>Music, Food, and Neon Lights.</p>
+        </header>
+
+        <section class="grid">
+            <div class="ev-card">
+                <h3>Street Food</h3>
+                <p>From legendary dumplings to artisanal pizza slices.</p>
+            </div>
+            <div class="ev-card">
+                <h3>Music Venues</h3>
+                <p>Dive into the underground scene at iconic clubs.</p>
+            </div>
+            <div class="ev-card">
+                <h3>Nightlife</h3>
+                <p>Speakeasies and neon-lit bars around every corner.</p>
+            </div>
+        </section>
+
+        <div class="interactive-box">
+            <h3>What's the vibe right now?</h3>
+            <button class="btn" onclick="generateVibe()" style="background: var(--accent-ev); color: #000;">Get a Vibe!</button>
+            <div id="vibe-display">???</div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="index.html" class="btn" style="background: #555;">&larr; Back to NYC Overview</a>
+        </div>
+    </div>
+
+    <script>
+        function generateVibe() {
+            const vibes = ['Electric ⚡', 'Chill ☕', 'Gritty 🎸', 'Groovy 🕺', 'Mysterious 🌙', 'Hungry 🍕'];
+            const randomIndex = Math.floor(Math.random() * vibes.length);
+            document.getElementById('vibe-display').innerText = vibes[randomIndex];
+        }
+    </script>
+</body>
+</html>
